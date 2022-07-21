@@ -20,8 +20,7 @@ export class SearchComponent implements OnInit {
   }
 
   buscar(temrino:string){
-    this.spotify.getArtista(temrino).subscribe((data:any)=>{
-      console.log(data)
+    this.spotify.getArtistas(temrino).subscribe((data:any)=>{
       this.artistas = data
       this.loading=false
     })

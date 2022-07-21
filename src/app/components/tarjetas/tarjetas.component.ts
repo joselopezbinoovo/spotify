@@ -12,7 +12,7 @@ export class TarjetasComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.items)
+
   }
 
 
@@ -20,11 +20,11 @@ export class TarjetasComponent implements OnInit {
     let artisraId;
 
     if ( item.type === 'artist'){
-      console.log(item.type)
+
       artisraId = item.id
     }else{
       artisraId = item.artists[0].id }
-      console.log(artisraId);
+
 
     this.router.navigate(['/artist', artisraId])
   }
